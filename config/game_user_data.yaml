@@ -1,0 +1,10 @@
+Audits: {Avg Ball Time: '0:02', Avg Extra Balls: 0, Avg Game Time: '2:35', Avg Score: 8240,
+  Balls Played: 318, Games Played: 106, Games Started: 160}
+ClassicHighScores:
+- {date: 'Sun Mar 25 13:27:28 2018', inits: RDS, score: 27290}
+- {date: 'Tue Feb  6 20:24:33 2018', inits: EDO, score: 25670}
+- {date: 'Sun Feb 18 14:39:05 2018', inits: EDO, score: 25600}
+- {date: 'Sun Jan 28 15:26:35 2018', inits: AA, score: 23100}
+- {date: 'Sun Jan 28 17:35:25 2018', inits: RDS, score: 21970}
+LoopsHighScoreData:
+- {inits: GSS, score: 5}
