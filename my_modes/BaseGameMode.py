@@ -51,9 +51,11 @@ class BaseGameMode(procgame.game.AdvancedMode):
         """ this event is fired to notify us that a ball has been saved
         """
         self.game.log("BaseGameMode: BALL SAVED from Trough callback")
-        self.game.sound.play('ball_saved')
+        #self.game.sound.play('ball_saved')
         self.game.displayText('Ball Saved!')
-        self.game.coils.flasherShootAgain.pulse()
+        self.game.coils.flasherscoopL.pulse()
+        self.game.coils.flasherscoopR.pulse()
+        self.game.coils.flasherlock.pulse()
         # Do NOT tell the trough to launch balls!  It's handled automatically!
         # self.game.trough.launch_balls(1)
 
