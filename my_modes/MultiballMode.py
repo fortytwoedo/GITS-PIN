@@ -8,6 +8,8 @@ class MultiballMode(procgame.game.AdvancedMode):
         super(MultiballMode, self).__init__(game=game, priority=50, mode_type=AdvancedMode.Game)
         #self.layer = self.game.animations["HK"]
         self.logger = logging.getLogger('MultiballMode')
+        self.mb_switches = [False, False, False]
+        self.multiball_active = False
         pass
 
     def mode_started(self):
@@ -30,6 +32,7 @@ class MultiballMode(procgame.game.AdvancedMode):
 
         
     def evt_single_ball_play(self):
+        self.multiball_active = False
         pass
 
     def launchBallIntoPlay(self, count=1, stealth=True):
@@ -37,21 +40,33 @@ class MultiballMode(procgame.game.AdvancedMode):
         self.game.trough.callback = None
         self.game.trough.launch_balls(num=count,stealth=stealth,callback=None)
 
-    def sw_lock1_active_for_50ms(self, sw):
+    def sw_lock1_active_for_100ms(self, sw):
         #lock the first ball play sound animation?
         self.game.trough.num_balls_locked = 1
-        self.launchBallIntoPlay()
+        if not self.mb_switches[0]:
+            self.launchBallIntoPlay()
+        self.mb_switches[0] = True
 
-    def sw_lock2_active_for_50ms(self, sw):
+    def sw_lock2_active_for_100ms(self, sw):
         #lock the first ball play sound animation?
         self.game.trough.num_balls_locked = 2
-        self.launchBallIntoPlay()
+        if not self.mb_switches[1]:
+            self.launchBallIntoPlay()
+        self.mb_switches[1] = True
 
-    def sw_lock3_active_for_50ms(self, sw):
+    def sw_lock3_active_for_100ms(self, sw):
         #lock the first ball play sound animation?
-        self.game.trough.num_balls_locked = 0
+        self.mb_switches[2] = True
         self.game.displayText("Multiball!!")
-        self.game.coils.lockdrop.pulsed_patter(5,2,100)
+
+    def sw_lock3_active_for_1s(self, sw): #Start Multiball
+        self.multiball_active = True
+        self.game.trough.num_balls_locked = 0
+        self.game.coils.lockdrop.patter(on_time=2, off_time=18, original_on_time=25)  #self.game.coils['coilName'].patter(on_time=2, off_time=18, original_on_time=25)
+        self.delay(name="disabler", delay=10.0, handler=stop_lock_coil)
+        self.mb_switches = [False, False, False]
         
+    def stop_lock_coil(self):
+        self.game.coils.lockdrop.disable()
 
 
