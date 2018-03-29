@@ -18,7 +18,7 @@ from procgame.game.skeletongame import run_proc_game
 # these are modes that you define, and probably store in
 # a my_modes folder under this one....
 import my_modes
-from my_modes import BaseGameMode, MachineMonitorMode, SkillshotMode, RScoopMode, LaughingManMode, PuppetMode, LeftRampLoop
+from my_modes import BaseGameMode, MachineMonitorMode, SkillshotMode, RScoopMode, LaughingManMode, PuppetMode, LeftRampLoop, AssembleTeamMode, MultiballMode
 
 # set up a few more things before we get started
 # the logger's configuration and format
@@ -54,6 +54,8 @@ class MyGame(SkeletonGame):
         self.rscoop_mode = RScoopMode(game=self)
         self.puppet_mode = PuppetMode(game=self)
         self.leftramp_mode = LeftRampLoop(game=self)
+        self.assemble_team_mode = AssembleTeamMode(game=self)
+        self.multiball_mode = MultiballMode(game=self)
         # this is also a reasonable place to setup lists of lamps, switches, drivers, etc.
         # that might be useful in more than one mode.
 
