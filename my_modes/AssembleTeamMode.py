@@ -2,18 +2,19 @@ import procgame.game
 from procgame.game import AdvancedMode
 import logging
 
-class LeftRampLoop(procgame.game.AdvancedMode):
+class AssembleTeamMode(procgame.game.AdvancedMode):
     """
     Mode that tracks both forward and backward shots on left "loop" ramp.
-    This ramp will also track and become a combo mode
+
     """
     def __init__(self, game):
-        super(LeftRampLoop, self).__init__(game=game, priority=44, mode_type=AdvancedMode.Game)
+        super(AssembleTeamMode, self).__init__(game=game, priority=45, mode_type=AdvancedMode.Manual)
         # useful to set-up a custom logger so it's easier to track debugging messages for this mode
-        self.logger = logging.getLogger('LeftRampLoop')
+        self.logger = logging.getLogger('AssembleTeamMode')
 
         self.forward_ramp_ready = False
         self.reverse_ramp_ready = False
+        self.loopscompleted = 0
         pass
 
     def evt_player_added(self, player):
@@ -28,7 +29,7 @@ class LeftRampLoop(procgame.game.AdvancedMode):
                 if (self.reverse_ramp_ready):
                     self.loopcompletedtt += 1
                     self.loopscompleted += 1
-                    self.game.score(100)
+                    self.game.score(100 * self.loopcompletedtt * self.loopscompleted )
                 else:
                     self.game.score(50)
                 self.game.displayText("Think Tank Loop " + str(self.loopcompletedtt))
@@ -48,7 +49,7 @@ class LeftRampLoop(procgame.game.AdvancedMode):
                 if (self.reverse_ramp_ready):
                     self.loopcompleteds9 += 1
                     self.loopscompleted += 1
-                    self.game.score(100))
+                    self.game.score((100 * self.loopscompleted * self.loopcompleteds9))
                 else:
                     self.game.score(50)
                 self.game.displayText("Section 9 Loop " + str(self.loopcompleteds9))
@@ -58,11 +59,7 @@ class LeftRampLoop(procgame.game.AdvancedMode):
                 self.reverse_ramp_ready = True
             else:
                 self.game.score(10)
-    
-    def sw_orbit_active(self, sw): 
-        self.game.score(100)    
-        #play sound
-            
+
     def evt_ball_starting(self):
         self.loopscompleted = 0
         self.cancel_delayed(name="disabler")
