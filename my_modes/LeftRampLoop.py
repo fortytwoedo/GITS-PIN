@@ -48,7 +48,7 @@ class LeftRampLoop(procgame.game.AdvancedMode):
                 if (self.reverse_ramp_ready):
                     self.loopcompleteds9 += 1
                     self.loopscompleted += 1
-                    self.game.score(100))
+                    self.game.score(100)
                 else:
                     self.game.score(50)
                 self.game.displayText("Section 9 Loop " + str(self.loopcompleteds9))
@@ -67,7 +67,6 @@ class LeftRampLoop(procgame.game.AdvancedMode):
         self.loopscompleted = 0
         self.cancel_delayed(name="disabler")
         self.disable_ramp_readiness()
-
 
     def evt_ball_ending(self, (shoot_again, last_ball)):
         self.cancel_delayed(name="disabler")

@@ -40,21 +40,21 @@ class MultiballMode(procgame.game.AdvancedMode):
         self.game.trough.callback = None
         self.game.trough.launch_balls(num=count,stealth=stealth,callback=None)
 
-    def sw_lock1_active_for_100ms(self, sw):
+    def sw_lock1_active_for_250ms(self, sw):
         #lock the first ball play sound animation?
         self.game.trough.num_balls_locked = 1
         if not self.mb_switches[0]:
             self.launchBallIntoPlay()
         self.mb_switches[0] = True
 
-    def sw_lock2_active_for_100ms(self, sw):
+    def sw_lock2_active_for_250ms(self, sw):
         #lock the first ball play sound animation?
         self.game.trough.num_balls_locked = 2
         if not self.mb_switches[1]:
             self.launchBallIntoPlay()
         self.mb_switches[1] = True
 
-    def sw_lock3_active_for_100ms(self, sw):
+    def sw_lock3_active_for_250ms(self, sw):
         #lock the first ball play sound animation?
         self.mb_switches[2] = True
         self.game.displayText("Multiball!!")
@@ -62,11 +62,16 @@ class MultiballMode(procgame.game.AdvancedMode):
     def sw_lock3_active_for_1s(self, sw): #Start Multiball
         self.multiball_active = True
         self.game.trough.num_balls_locked = 0
-        self.game.coils.lockdrop.patter(on_time=2, off_time=18, original_on_time=25)  #self.game.coils['coilName'].patter(on_time=2, off_time=18, original_on_time=25)
-        self.delay(name="disabler", delay=10.0, handler=stop_lock_coil)
+        self.game.coils.lockdrop.patter(on_time=2, off_time=15, original_on_time=25)  #self.game.coils['coilName'].patter(on_time=2, off_time=18, original_on_time=25)
+        self.delay(name="disabler", delay=8.0, handler=self.stop_lock_coil)
         self.mb_switches = [False, False, False]
         
     def stop_lock_coil(self):
         self.game.coils.lockdrop.disable()
+        
+    def evt_game_ending(self):
+        self.game.coils.lockdrop.patter(on_time=2, off_time=15, original_on_time=25)  #self.game.coils['coilName'].patter(on_time=2, off_time=18, original_on_time=25)
+        self.delay(name="disabler", delay=5.0, handler=self.stop_lock_coil)
+        pass
 
 

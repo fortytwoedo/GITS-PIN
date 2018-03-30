@@ -135,6 +135,8 @@ class LaughingManMode(procgame.game.AdvancedMode):
         self.game.setPlayerState("mode_complex_collected", self.collected)
         self.game.coils.flasherscoopL.disable()
         self.game.modes.remove(self.game.assemble_team_mode)
+        if not (self.game.leftramp_mode in self.game.modes):
+            self.game.modes.add(self.game.leftramp_mode)
         #disable assemble team mode enable loop score mode.
 
     def sw_ScoopL_active_for_500ms(self, sw):
@@ -148,6 +150,7 @@ class LaughingManMode(procgame.game.AdvancedMode):
             self.game.coils.flasherscoopL.disable()
             self.db_enabled = True
             self.game.modes.add(self.game.assemble_team_mode)
+            self.game.modes.remove(self.game.leftramp_mode)
             #enable assemble team mode disable loop score mode.
         else:
             self.game.displayText("Drop GHOST Targets")
