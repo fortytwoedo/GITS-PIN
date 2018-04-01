@@ -34,17 +34,17 @@ class BaseGameMode(procgame.game.AdvancedMode):
         self.game.sound.enable_music_ducking(True)
         self.game.sound.fadeout_music()
         self.game.sound.play_music('base-music-bgm',-1)
-        self.game.coils.gate.patter(5,2)
+        #self.game.coils.gate.patter(5,2)
         self.game.coils.backboxR.enable()
         self.game.coils.backboxG.enable()
         self.game.coils.backboxB.enable()
 
-    def sw_shooter_inactive_for_250ms(self, sw):
+    #def sw_shooter_inactive_for_250ms(self, sw):
         # ball saver syntax has changed.  We no longer need to supply a callback
         # method instead, evt_ball_saved() will be called if a ball is saved.
         # to enable it, use this 
         # (defaults are 1 ball, save time length is based on service mode setting)
-        self.game.enable_ball_saver()
+        #self.game.enable_ball_saver()
         
 
     def evt_ball_saved(self):

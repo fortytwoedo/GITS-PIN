@@ -23,7 +23,8 @@ class RScoopMode(procgame.game.AdvancedMode):
 
         self.qualified = 0 # the number that are flashing
         self.collected = 0 # the number the player already has
-        #self.laps = 0
+        self.TOC_Active = False
+        #self.la = 0
 
         #self.mid_switches = [False, False, False]
         #self.awards = [] # the list of awards
@@ -40,6 +41,8 @@ class RScoopMode(procgame.game.AdvancedMode):
         self.man_switches = [False, False]
         self.qualified = self.game.getPlayerState("esc_route_qualified")
         self.collected = self.game.getPlayerState("esc_route_collected")
+        if(self.qualified > self.collected):
+            self.game.coils.flasherscoopR.schedule(schedule=0x80808080, cycle_seconds=0, now=True)
         #self.laps = self.game.getPlayerState("esc_route_laps")
         #self.sync_lamps_to_progress()
 
@@ -48,10 +51,16 @@ class RScoopMode(procgame.game.AdvancedMode):
         self.game.setPlayerState("esc_route_qualified", self.qualified)
         self.game.setPlayerState("esc_route_collected", self.collected)
         #self.game.setPlayerState("esc_route_laps", self.laps)
+        self.game.coils.flasherscoopR.disable()
 
     def sw_thermoOC_active(self, sw):
         self.game.displayText("Thermo Optic Camouflage")
-        self.game.score(1500)
+        self.game.score(500)
+        self.TOC_Active = True
+        self.delay(delay=3, handler=self.disable_TOC)
+
+    def disable_TOC(self):
+        self.TOC_Active = False
 
     def sw_StandUpL_active(self, sw):
         self.man_switches[0] = True
@@ -72,6 +81,7 @@ class RScoopMode(procgame.game.AdvancedMode):
                 self.game.displayText("Shoot the Right Scoop!")
                 self.game.score(500)
                 self.game.sound.play('target_bank')
+                self.game.coils.flasherscoopR.schedule(schedule=0x80808080, cycle_seconds=0, now=True)
                 #self.game.lamps.standupMidL.disable()
                 #self.game.lamps.standupMidC.disable()
                 #self.game.lamps.standupMidR.disable()
@@ -88,12 +98,18 @@ class RScoopMode(procgame.game.AdvancedMode):
             # do award
             self.game.displayText("Collected " + str(self.collected))
             self.collected += 1
-            self.game.score(1000)
+            self.game.coils.flasherscoopR.disabled()
+            if self.TOC_Active:
+                self.game.score(3000)
+                self.TOC_Active = False
+            else:
+                self.game.score(1000)
         else:
             #self.game.displayText("Jackpot grows!")
             self.game.score(100)
         #self.debug()
         #self.sync_lamps_to_progress()
+        self.game.coils.flasherscoopR.schedule(schedule=0xf0f0f0f0, cycle_seconds=1, now=True)
 
     def sw_ScoopR_active_for_1s(self, sw):
         self.game.coils.scoopR.pulse()

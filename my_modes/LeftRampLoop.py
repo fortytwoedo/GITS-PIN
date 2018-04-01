@@ -61,8 +61,13 @@ class LeftRampLoop(procgame.game.AdvancedMode):
     
     def sw_orbit_active(self, sw): 
         self.game.score(100)    
+        self.game.coils.gate.patter(on_time=4, off_time=2, original_on_time=10)
+        self.delay(name="orbit_disabler", delay=1.5, handler=self.stop_gate_coil)
         #play sound
-            
+
+    def stop_gate_coil(self):
+        self.game.coils.gate.disable()
+        
     def evt_ball_starting(self):
         self.loopscompleted = 0
         self.cancel_delayed(name="disabler")

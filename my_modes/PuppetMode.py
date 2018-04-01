@@ -73,6 +73,7 @@ class PuppetMode(procgame.game.AdvancedMode):
             #self.game.coils.droptarget.pulse()
             self.S2501_switches = [False, False, False, False]
             self.delay(name="pupdelay",delay=10.0, handler=self.reset_puppet_huryup)
+            self.game.coils.flasherlock.enable()
         else:
             self.game.score(10)
             #self.game.sound.play('target')
@@ -92,6 +93,7 @@ class PuppetMode(procgame.game.AdvancedMode):
 
     def reset_puppet_huryup(self):			
         self.S2501_complete = False
+        self.game.coils.flasherlock.disable()
 
     def evt_ball_starting(self):
         self.S2501_complete = False

@@ -33,10 +33,33 @@ class SkillshotMode(procgame.game.AdvancedMode):
     def mode_started(self):
         self.delay(name="skilltimeout", delay=10.5, handler=self.deact)
 
+    def sw_shooter_inactive_for_250ms(self, sw):
+        # ball saver syntax has changed.  We no longer need to supply a callback
+        # method instead, evt_ball_saved() will be called if a ball is saved.
+        # to enable it, use this 
+        # (defaults are 1 ball, save time length is based on service mode setting)
+        self.game.enable_ball_saver()
+
     def sw_rampLeftHigh_active(self,sw):
         self.skill_shot_made = True
         self.deact()
 
+    def sw_inlaneL_active(self,sw):
+        self.skill_shot_made = True
+        self.deact()
+
+    def sw_inlaneR_active(self,sw):
+        self.deact()
+
+    def sw_outlaneL_active(self,sw):
+        self.deact()
+
+    def sw_outlaneR_active(self,sw):
+        self.deact()
+
+    def sw_rampLeftLow_active(self,sw):
+        self.deact()
+        
     def sw_slingL_active(self,sw):
         self.deact()
         

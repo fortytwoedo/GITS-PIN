@@ -32,7 +32,7 @@ class LaughingManMode(procgame.game.AdvancedMode):
     def sw_dropMiss_active(self, sw):
         self.game.score(10)
         self.game.sound.play('sling')	
-		
+
     def sw_dropG_active(self, sw):
         self.drop_switches[0] = True
         #self.game.lamps.standupMidL.enable()
