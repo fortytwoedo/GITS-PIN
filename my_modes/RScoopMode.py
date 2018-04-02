@@ -98,7 +98,7 @@ class RScoopMode(procgame.game.AdvancedMode):
             # do award
             self.game.displayText("Collected " + str(self.collected))
             self.collected += 1
-            self.game.coils.flasherscoopR.disabled()
+            self.game.coils.flasherscoopR.disable()
             if self.TOC_Active:
                 self.game.score(3000)
                 self.TOC_Active = False

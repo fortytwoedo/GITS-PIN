@@ -59,6 +59,7 @@ class MultiballMode(procgame.game.AdvancedMode):
             self.launchBallIntoPlay()
             self.mb_switches[0] = True
             self.game.coils.flasherlock.schedule(schedule=0xf0f0f000, cycle_seconds=1, now=True)
+            logging.info("ball one locked")
 
     def sw_lock2_active_for_500ms(self, sw):
         #lock the first ball play sound animation?
@@ -67,6 +68,7 @@ class MultiballMode(procgame.game.AdvancedMode):
             self.launchBallIntoPlay()
             self.mb_switches[1] = True
             self.game.coils.flasherlock.schedule(schedule=0xf0f0f000, cycle_seconds=1, now=True)
+            logging.info("ball two locked")
 
     def sw_lock3_active_for_300ms(self, sw):
         #lock the first ball play sound animation?

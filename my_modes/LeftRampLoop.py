@@ -5,7 +5,7 @@ import logging
 class LeftRampLoop(procgame.game.AdvancedMode):
     """
     Mode that tracks both forward and backward shots on left "loop" ramp.
-    This ramp will also track and become a combo mode
+    This ramp will also track combo shots between the left ramp forward and reverse and orbit
     """
     def __init__(self, game):
         super(LeftRampLoop, self).__init__(game=game, priority=44, mode_type=AdvancedMode.Game)
@@ -14,6 +14,8 @@ class LeftRampLoop(procgame.game.AdvancedMode):
 
         self.forward_ramp_ready = False
         self.reverse_ramp_ready = False
+        self.combo_shots = [False, False, False, False] #track last event used for combo orbit, left forward, left reverse, Right Ramp
+        self.combo_made = 0 # track what shot your on.
         pass
 
     def evt_player_added(self, player):
@@ -36,6 +38,10 @@ class LeftRampLoop(procgame.game.AdvancedMode):
                 self.delay(name="disabler", delay=2.0, handler=self.disable_ramp_readiness)
                 self.forward_ramp_ready = True
                 self.reverse_ramp_ready = True
+                if self.combo_shots[2]: #combo  code
+                    self.combo_made = 0
+                self.combo_shots = [False, False, True, False]
+                self.combo_switch_check()
             else:
                 self.game.score(10)
 
@@ -56,15 +62,43 @@ class LeftRampLoop(procgame.game.AdvancedMode):
                 self.delay(name="disabler", delay=2.0, handler=self.disable_ramp_readiness)
                 self.forward_ramp_ready = True
                 self.reverse_ramp_ready = True
+                if self.combo_shots[1]: #combo code
+                    self.combo_made = 0
+                self.combo_shots = [False, True, False, False]
+                self.combo_switch_check()
             else:
                 self.game.score(10)
+                
+    def disable_combo_readiness(self):
+        self.combo_made = 0
+        self.combo_shots = [False, False, False, False]
+    
+    def combo_switch_check(self):
+        self.combo_made += 1
+        if self.combo_made > 1:
+            self.game.displayText(str(self.combo_made) + " Way Combo")
+            self.game.score(300 * self.combo_made)#reward
+        self.cancel_delayed(name="combo")
+        self.delay(name="combo", delay=3.5, handler=self.disable_combo_readiness)
     
     def sw_orbit_active(self, sw): 
         self.game.score(100)    
         self.game.coils.gate.patter(on_time=4, off_time=2, original_on_time=10)
         self.delay(name="orbit_disabler", delay=1.5, handler=self.stop_gate_coil)
+        #combo code
+        if self.combo_shots[0]:
+            self.combo_made = 0
+        self.combo_shots = [True, False, False, False]
+        self.combo_switch_check()
         #play sound
-
+        
+    def sw_rampRight_active(self, sw):
+        #combo code
+        if self.combo_shots[3]:
+            self.combo_made = 0
+        self.combo_shots = [False, False, False, True]
+        self.combo_switch_check()
+        
     def stop_gate_coil(self):
         self.game.coils.gate.disable()
         
