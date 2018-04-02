@@ -1,0 +1,390 @@
+pySerial not found; RGBDMD support will be unavailable
+Desktop init begun.
+Flushing Read Buffer: 0 bytes trashed
+FPGA Chip ID: 0xf33db33f
+FPGA Chip Version/Rev: 2.6
+
+
+Sending Aux Commands: numCommands:255, addr:0
+
+Using a virtual DMD ONLY - no physical DMD output will be sent
+Using a virtual DMD ONLY - no physical DMD output will be sent
+2018-04-01 20:57:55,740 - game - INFO - Loading machine configuration from "config/GITS.yaml"...
+2018-04-01 20:57:55,825 - game.pdb - INFO - Configuring P-ROC to work with PDBs
+2018-04-01 20:57:55,836 - game.pdb - INFO - Driver group 00 (dedicated): Enable=True
+2018-04-01 20:57:55,837 - game.pdb - INFO - Driver group 01 (dedicated): Enable=True
+2018-04-01 20:57:55,837 - game.pdb - INFO - Driver group 02 (dedicated): Enable=True
+2018-04-01 20:57:55,837 - game.pdb - INFO - Driver group 03 (dedicated): Enable=True
+2018-04-01 20:57:55,837 - game.pdb - INFO - Driver group 04: slow_time=0 Enable Index=3
+2018-04-01 20:57:55,837 - game.pdb - INFO - Driver group 05: slow_time=0 Enable Index=2
+2018-04-01 20:57:55,837 - game.pdb - INFO - Driver group 06: slow_time=0 Enable Index=1
+2018-04-01 20:57:55,837 - game.pdb - INFO - Driver group 07: slow_time=0 Enable Index=0
+2018-04-01 20:57:55,837 - game.pdb - INFO - Driver group 08: disabled
+2018-04-01 20:57:55,838 - game.pdb - INFO - Driver group 09: disabled
+2018-04-01 20:57:55,838 - game.pdb - INFO - Driver group 10: disabled
+2018-04-01 20:57:55,838 - game.pdb - INFO - Driver group 11: disabled
+2018-04-01 20:57:55,838 - game.pdb - INFO - Driver group 12: disabled
+2018-04-01 20:57:55,838 - game.pdb - INFO - Driver group 13: disabled
+2018-04-01 20:57:55,838 - game.pdb - INFO - Driver group 14: disabled
+2018-04-01 20:57:55,838 - game.pdb - INFO - Driver group 15: disabled
+2018-04-01 20:57:55,838 - game.pdb - INFO - Driver group 16: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 17: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 18: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 19: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 20: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 21: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 22: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 23: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 24: disabled
+2018-04-01 20:57:55,839 - game.pdb - INFO - Driver group 25: disabled
+2018-04-01 20:57:55,840 - game.pdb - INFO - Configuring PDB Driver Globals:  polarity = True  matrix column index 0 = 0  matrix column index 1 = 0
+2018-04-01 20:57:55,841 - game - ERROR - PRLamps Item: gi01 cannot be controlled by the P-ROC.  Ignoring...
+2018-04-01 20:57:55,841 - game - ERROR - PRLamps Item: gi02 cannot be controlled by the P-ROC.  Ignoring...
+2018-04-01 20:57:55,841 - game - ERROR - PRLamps Item: gi03 cannot be controlled by the P-ROC.  Ignoring...
+2018-04-01 20:57:55,841 - game - ERROR - PRLamps Item: gi04 cannot be controlled by the P-ROC.  Ignoring...
+2018-04-01 20:57:55,841 - game - ERROR - PRLamps Item: gi05 cannot be controlled by the P-ROC.  Ignoring...
+2018-04-01 20:57:55,842 - game - ERROR - PRLamps Item: startButton cannot be controlled by the P-ROC.  Ignoring...
+2018-04-01 20:57:55,844 - game - INFO - Programming switch rules...
+2018-04-01 20:57:55,891 - game - INFO - LEDS...
+2018-04-01 20:57:55,910 - game.modes - INFO - Added SoundController  pri=10.
+2018-04-01 20:57:55,910 - game - DEBUG - Skel: Known advanced modes added 'RgbShowPlayer  pri=50'
+2018-04-01 20:57:55,911 - game.modes - INFO - Added RgbShowPlayer  pri=50.
+2018-04-01 20:57:55,911 - game.assets - INFO - asset configuration found at /home/fortytwo/GITS/config/asset_list.yaml
+2018-04-01 20:57:56,108 - game.dmdcache - WARNING - Loading image file with caching disabled; set dmd_cache_path in config to enable.
+2018-04-01 20:57:56,502 - game.sound - ERROR - Music registration error: file ./assets/sound/music/mitch murder - green hill zone theme.ogg does not exist!
+2018-04-01 20:57:56,504 - game.sound - ERROR - Sound registration error: file ./assets/sound/sfx/AutoFire.ogg does not exist!
+2018-04-01 20:57:56,507 - game.sound - ERROR - Sound registration error: file ./assets/sound/sfx/accomplish_tune.wav does not exist!
+2018-04-01 20:57:56,519 - game.sound - ERROR - Sound registration error: file ./assets/sound/sfx/MENU A_Select.wav does not exist!
+2018-04-01 20:57:56,523 - game.sound - ERROR - Sound registration error: file ./assets/sound/sfx/MENU A_Back.wav does not exist!
+2018-04-01 20:57:56,526 - game.sound - ERROR - Sound registration error: file ./assets/sound/sfx/MESSAGE-B_Decline.wav does not exist!
+2018-04-01 20:57:56,542 - game.sound - ERROR - Sound registration error: file ./assets/sound/sfx/MENU B_Back.wav does not exist!
+2018-04-01 20:57:56,545 - game.sound - ERROR - Sound registration error: file ./assets/sound/sfx/ALERT_Appear.wav does not exist!
+2018-04-01 20:57:56,590 - game.sound - ERROR - Sound registration error: file ./assets/sound/voice/DirectHit1.ogg does not exist!
+2018-04-01 20:57:56,599 - game.sound - ERROR - Sound registration error: file ./assets/sound/voice/YouMissed2.ogg does not exist!
+2018-04-01 20:57:56,629 - game.sound - ERROR - Sound registration error: file ./assets/sound/voice/MSeenBrain.ogg does not exist!
+Using a virtual DMD ONLY - no physical DMD output will be sent
+Using a virtual DMD ONLY - no physical DMD output will be sent
+2018-04-01 20:57:56,666 - game.modes - INFO - Added DMDHelper  pri=12.
+2018-04-01 20:57:56,697 - game - DEBUG - Skel: Known advanced modes added 'BonusMode  pri=1'
+2018-04-01 20:57:56,710 - game - INFO - Read volume file value: 5
+2018-04-01 20:57:56,710 - game - INFO - VOLUME SET TO: 5 / 20
+2018-04-01 20:57:56,741 - game - DEBUG - Skel: Known advanced modes added 'TiltMonitorMode  pri=99998'
+2018-04-01 20:57:56,742 - Trough - WARNING - No switches have been tagged 'trough'.  Switches with names that start Trough will be used.
+2018-04-01 20:57:56,742 - trough - INFO - No outhole switch found (name or tag).  If an outhole trough setup is preset, you should adjust names/tag in the machine yaml.
+2018-04-01 20:57:56,744 - game - INFO - OSC Server listening on 127.0.1.1:9000
+2018-04-01 20:57:56,745 - game.modes - INFO - Added OSC_Mode  pri=1.
+2018-04-01 20:57:56,746 - game.modes - INFO - Added SwitchMonitor  pri=32767.
+2018-04-01 20:57:56,766 - dmdhelper - ERROR - yaml refers to a font 'status' that does not exist.  Please check the assetList to ensure this font is present
+2018-04-01 20:57:56,766 - root - ERROR - ***ASSET ERROR: An asset with key 'status' has not been loaded.  Using default 'default' instead
+2018-04-01 20:57:56,777 - dmdhelper - WARNING - Processing YAML, Combo section contains no 'Text' tag.  Consider using Animation instead.
+2018-04-01 20:57:56,779 - dmdhelper - ERROR - yaml refers to a font 'status' that does not exist.  Please check the assetList to ensure this font is present
+2018-04-01 20:57:56,779 - root - ERROR - ***ASSET ERROR: An asset with key 'status' has not been loaded.  Using default 'default' instead
+2018-04-01 20:57:56,781 - dmdhelper - ERROR - yaml refers to a font 'status' that does not exist.  Please check the assetList to ensure this font is present
+2018-04-01 20:57:56,781 - root - ERROR - ***ASSET ERROR: An asset with key 'status' has not been loaded.  Using default 'default' instead
+2018-04-01 20:57:56,783 - game - INFO - re-generating scores layer!!!!!!!!!!!!!!!!!!!!
+2018-04-01 20:57:56,784 - game - INFO - re-generating scores: ['RDS', 'Grand Champion', '27,290'] 
+2018-04-01 20:57:56,797 - game - INFO - re-generating scores: ['EDO', 'High Score 1', '25,670'] 
+2018-04-01 20:57:56,807 - game - INFO - re-generating scores: ['EDO', 'High Score 2', '25,600'] 
+2018-04-01 20:57:56,817 - game - INFO - re-generating scores: ['AA', 'High Score 3', '23,100'] 
+2018-04-01 20:57:56,830 - game - INFO - re-generating scores: ['RDS', 'High Score 4', '21,970'] 
+2018-04-01 20:57:56,843 - game - DEBUG - Skel: Known advanced modes added 'BaseGameMode  pri=5'
+2018-04-01 20:57:56,843 - game - DEBUG - Skel: Known advanced modes added 'MachineMonitorMode  pri=5'
+2018-04-01 20:57:56,844 - game - DEBUG - Skel: Known advanced modes added 'SkillshotMode  pri=20'
+2018-04-01 20:57:56,844 - game - DEBUG - Skel: Known advanced modes added 'LaughingManMode  pri=29'
+2018-04-01 20:57:56,844 - game - DEBUG - Skel: Known advanced modes added 'RScoopMode  pri=30'
+2018-04-01 20:57:56,845 - game - DEBUG - Skel: Known advanced modes added 'PuppetMode  pri=42'
+2018-04-01 20:57:56,845 - game - DEBUG - Skel: Known advanced modes added 'LeftRampLoop  pri=44'
+2018-04-01 20:57:56,845 - game - DEBUG - Skel: Known advanced modes added 'AssembleTeamMode  pri=45'
+2018-04-01 20:57:56,846 - game - DEBUG - Skel: Known advanced modes added 'MultiballMode  pri=50'
+2018-04-01 20:57:56,846 - game - INFO - Skel: RESET()
+2018-04-01 20:57:56,846 - game - INFO - Programming flipper flipperLwR
+2018-04-01 20:57:56,846 - game - INFO - Disabling WPC style flipper
+2018-04-01 20:57:56,846 - game - INFO - Programming flipper flipperLwL
+2018-04-01 20:57:56,846 - game - INFO - Disabling WPC style flipper
+2018-04-01 20:57:56,847 - game - INFO - Programming flipper flipperUpR
+2018-04-01 20:57:56,847 - game - INFO - Disabling WPC style flipper
+2018-04-01 20:57:56,847 - game - DEBUG - AN Flipper enable in SkelGame.py called
+2018-04-01 20:57:56,847 - game - WARNING - No flipperEnable entry in PRCoils section of machine yaml
+2018-04-01 20:57:56,859 - game - INFO - Read volume file value: 5
+2018-04-01 20:57:56,860 - game - INFO - VOLUME SET TO: 5 / 20
+2018-04-01 20:57:56,873 - game - INFO - Skel: RESET: trough isn't full [0 of 4] -- requesting search
+2018-04-01 20:57:56,873 - ballsearch - DEBUG - perform_search(completion_wait_time=5)
+2018-04-01 20:57:56,873 - ballsearch - INFO - Initiated
+2018-04-01 20:57:56,874 - game.modes - INFO - Added SoundController  pri=10.
+2018-04-01 20:57:56,874 - game.modes - INFO - Added RgbShowPlayer  pri=50.
+2018-04-01 20:57:56,874 - game.modes - INFO - Added MachineMonitorMode  pri=5.
+2018-04-01 20:57:56,874 - game.modes - INFO - Added Trough  pri=90.
+2018-04-01 20:57:56,874 - game.modes - INFO - Added BallSave  pri=3.
+2018-04-01 20:57:56,874 - game.modes - INFO - Added ScoreDisplayHD  pri=0.
+2018-04-01 20:57:56,874 - game.modes - INFO - Added BallSearch  pri=8.
+2018-04-01 20:57:56,874 - ballsearch - INFO - Disabled
+2018-04-01 20:57:56,874 - ballsearch - DEBUG - countdown STOPPED via ''
+2018-04-01 20:57:56,874 - game.modes - INFO - Added DMDHelper  pri=12.
+2018-04-01 20:57:56,874 - game.modes - INFO - Added SwitchMonitor  pri=32767.
+2018-04-01 20:57:56,874 - game - INFO - re-generating scores layer!!!!!!!!!!!!!!!!!!!!
+2018-04-01 20:57:56,875 - game - INFO - re-generating scores: ['RDS', 'Grand Champion', '27,290'] 
+2018-04-01 20:57:56,884 - game - INFO - re-generating scores: ['EDO', 'High Score 1', '25,670'] 
+2018-04-01 20:57:56,893 - game - INFO - re-generating scores: ['EDO', 'High Score 2', '25,600'] 
+2018-04-01 20:57:56,903 - game - INFO - re-generating scores: ['AA', 'High Score 3', '23,100'] 
+2018-04-01 20:57:56,912 - game - INFO - re-generating scores: ['RDS', 'High Score 4', '21,970'] 
+2018-04-01 20:57:56,921 - game.modes - INFO - Added Attract  pri=9.
+2018-04-01 20:57:56,921 - game - INFO - re-generating scores layer!!!!!!!!!!!!!!!!!!!!
+2018-04-01 20:57:56,922 - game - INFO - re-generating scores: ['RDS', 'Grand Champion', '27,290'] 
+2018-04-01 20:57:56,932 - game - INFO - re-generating scores: ['EDO', 'High Score 1', '25,670'] 
+2018-04-01 20:57:56,942 - game - INFO - re-generating scores: ['EDO', 'High Score 2', '25,600'] 
+2018-04-01 20:57:56,951 - game - INFO - re-generating scores: ['AA', 'High Score 3', '23,100'] 
+2018-04-01 20:57:56,960 - game - INFO - re-generating scores: ['RDS', 'High Score 4', '21,970'] 
+2018-04-01 20:57:56,979 - game.modes - INFO - Modes changed in last run loop cycle, now:
+2018-04-01 20:57:56,979 - game.modes - INFO -   32767  SwitchMonitor       -                
+2018-04-01 20:57:56,979 - game.modes - INFO -   90     Trough              -                
+2018-04-01 20:57:56,979 - game.modes - INFO -   50     RgbShowPlayer       -                
+2018-04-01 20:57:56,979 - game.modes - INFO -   12     DMDHelper           -                
+2018-04-01 20:57:56,979 - game.modes - INFO -   10     SoundController     -                
+2018-04-01 20:57:56,980 - game.modes - INFO -   9      Attract             ScriptlessLayer  opaque=True   enabled=True  
+2018-04-01 20:57:56,980 - game.modes - INFO -   8      BallSearch          -                
+2018-04-01 20:57:56,980 - game.modes - INFO -   5      MachineMonitorMode  -                
+2018-04-01 20:57:56,980 - game.modes - INFO -   3      BallSave            -                
+2018-04-01 20:57:56,980 - game.modes - INFO -   1      OSC_Mode            -                
+2018-04-01 20:57:56,980 - game.modes - INFO -   0      ScoreDisplayHD      ScoreLayer       opaque=False  enabled=True  
+2018-04-01 20:57:57,026 - ballsearch - DEBUG - FIRING 'scoopL'
+2018-04-01 20:57:57,049 - game - INFO - ScoopL:	open  	(2)
+2018-04-01 20:57:57,050 - ballsearch - DEBUG - countdown STOPPED via '<procgame.game.gameitems.Switch object at 0x7f0e63f53a50>'
+2018-04-01 20:57:57,113 - game - INFO - ScoopL:	closed	(1)
+2018-04-01 20:57:57,177 - ballsearch - DEBUG - FIRING 'gate'
+2018-04-01 20:57:57,325 - ballsearch - DEBUG - FIRING 'scoopR'
+2018-04-01 20:57:57,348 - game - INFO - ScoopR:	open  	(2)
+2018-04-01 20:57:57,349 - ballsearch - DEBUG - countdown STOPPED via '<procgame.game.gameitems.Switch object at 0x7f0e63f53810>'
+2018-04-01 20:57:57,412 - game - INFO - ScoopR:	closed	(1)
+2018-04-01 20:57:57,479 - ballsearch - DEBUG - FIRING 'droptarget'
+2018-04-01 20:57:57,625 - ballsearch - DEBUG - FIRING 'jetB'
+2018-04-01 20:58:14,412 - game - INFO - trough1:	closed	(1)
+2018-04-01 20:58:14,452 - game - INFO - trough1:	open  	(2)
+2018-04-01 20:58:14,491 - game - INFO - trough2:	closed	(1)
+2018-04-01 20:58:14,530 - game - INFO - trough2:	open  	(2)
+2018-04-01 20:58:14,565 - game - INFO - trough3:	closed	(1)
+2018-04-01 20:58:14,592 - game - INFO - trough1:	closed	(1)
+2018-04-01 20:58:14,598 - game - INFO - trough3:	open  	(2)
+2018-04-01 20:58:14,616 - game - INFO - trough4:	open  	(2)
+2018-04-01 20:58:14,626 - game - INFO - trough1:	open  	(2)
+2018-04-01 20:58:14,669 - game - INFO - trough2:	closed	(1)
+2018-04-01 20:58:14,708 - game - INFO - trough2:	open  	(2)
+2018-04-01 20:58:14,793 - game - INFO - trough3:	closed	(1)
+2018-04-01 20:58:14,826 - game - INFO - trough1:	closed	(1)
+2018-04-01 20:58:14,861 - game - INFO - trough1:	open  	(2)
+2018-04-01 20:58:14,900 - game - INFO - trough2:	closed	(1)
+2018-04-01 20:58:15,152 - game - INFO - trough1:	closed	(1)
+2018-04-01 20:58:17,022 - game - INFO - startButton:	closed	(1)
+2018-04-01 20:58:17,022 - game - INFO - Skel:Game START Requested...(check trough first)
+2018-04-01 20:58:17,023 - game - INFO - Skel:Game START Proceeding
+2018-04-01 20:58:17,023 - game.modes - INFO - Removed Attract  pri=9.
+2018-04-01 20:58:17,023 - game.modes - INFO - Added BaseGameMode  pri=5.
+2018-04-01 20:58:17,024 - game.modes - INFO - Added LaughingManMode  pri=29.
+2018-04-01 20:58:17,024 - game.modes - INFO - Added RScoopMode  pri=30.
+2018-04-01 20:58:17,024 - game.modes - INFO - Added PuppetMode  pri=42.
+2018-04-01 20:58:17,024 - game.modes - INFO - Added LeftRampLoop  pri=44.
+2018-04-01 20:58:17,024 - game.modes - INFO - Added MultiballMode  pri=50.
+2018-04-01 20:58:17,032 - game - INFO - Skel: preparing to notify modes of event evt_game_starting.
+2018-04-01 20:58:17,032 - game - DEBUG - Skel: completing event 'None' by calling '<bound method MyGame.actually_start_game of <__main__.MyGame object at 0x7f0e63f2c2d0>>'
+2018-04-01 20:58:17,032 - game - INFO - Skel: preparing to notify modes of 'quick' event evt_player_added.
+2018-04-01 20:58:17,032 - game - DEBUG - Skel: quick event 'evt_player_added' handler found in mode [BaseGameMode  pri=5]
+2018-04-01 20:58:17,032 - game - DEBUG - Skel: quick event 'evt_player_added' handler found in mode [SkillshotMode  pri=20]
+2018-04-01 20:58:17,032 - game - DEBUG - Skel: quick event 'evt_player_added' handler found in mode [LaughingManMode  pri=29]
+2018-04-01 20:58:17,032 - game - DEBUG - Skel: quick event 'evt_player_added' handler found in mode [RScoopMode  pri=30]
+2018-04-01 20:58:17,032 - game - DEBUG - Skel: quick event 'evt_player_added' handler found in mode [PuppetMode  pri=42]
+2018-04-01 20:58:17,032 - game - DEBUG - Skel: quick event 'evt_player_added' handler found in mode [LeftRampLoop  pri=44]
+2018-04-01 20:58:17,033 - game - DEBUG - Skel: quick event 'evt_player_added' handler found in mode [AssembleTeamMode  pri=45]
+2018-04-01 20:58:17,033 - game - DEBUG - Skel: quick event 'evt_player_added' being handled in mode [BaseGameMode  pri=5]
+2018-04-01 20:58:17,038 - game.sound - ERROR - ERROR SOUND KEY NOT FOUND: click
+2018-04-01 20:58:17,038 - game - DEBUG - Skel: quick event 'evt_player_added' being handled in mode [SkillshotMode  pri=20]
+2018-04-01 20:58:17,038 - game - DEBUG - Skel: quick event 'evt_player_added' being handled in mode [LaughingManMode  pri=29]
+2018-04-01 20:58:17,038 - game - DEBUG - Skel: quick event 'evt_player_added' being handled in mode [RScoopMode  pri=30]
+2018-04-01 20:58:17,038 - game - DEBUG - Skel: quick event 'evt_player_added' being handled in mode [PuppetMode  pri=42]
+2018-04-01 20:58:17,038 - game - DEBUG - Skel: quick event 'evt_player_added' being handled in mode [LeftRampLoop  pri=44]
+2018-04-01 20:58:17,039 - game - DEBUG - Skel: quick event 'evt_player_added' being handled in mode [AssembleTeamMode  pri=45]
+2018-04-01 20:58:17,039 - game - INFO - Skel: BALL STARTING
+2018-04-01 20:58:17,039 - game.modes - INFO - Added BonusMode  pri=1.
+2018-04-01 20:58:17,039 - game.modes - INFO - Added TiltMonitorMode  pri=99998.
+2018-04-01 20:58:17,039 - game - DEBUG - Skel: Known advanced modes added 'Tilted  pri=99999'
+2018-04-01 20:58:17,041 - game.modes - INFO - Added SkillshotMode  pri=20.
+2018-04-01 20:58:17,041 - game - INFO - Skel: preparing to notify modes of event evt_ball_starting.
+2018-04-01 20:58:17,041 - game - DEBUG - Skel: event 'evt_ball_starting' queuing handler found in mode [BaseGameMode  pri=5]
+2018-04-01 20:58:17,041 - game - DEBUG - Skel: event 'evt_ball_starting' queuing handler found in mode [SkillshotMode  pri=20]
+2018-04-01 20:58:17,041 - game - DEBUG - Skel: event 'evt_ball_starting' queuing handler found in mode [LaughingManMode  pri=29]
+2018-04-01 20:58:17,041 - game - DEBUG - Skel: event 'evt_ball_starting' queuing handler found in mode [RScoopMode  pri=30]
+2018-04-01 20:58:17,041 - game - DEBUG - Skel: event 'evt_ball_starting' queuing handler found in mode [PuppetMode  pri=42]
+2018-04-01 20:58:17,041 - game - DEBUG - Skel: event 'evt_ball_starting' queuing handler found in mode [LeftRampLoop  pri=44]
+2018-04-01 20:58:17,041 - game - DEBUG - Skel: calling mode 'LeftRampLoop  pri=44' event handler for event 'evt_ball_starting'
+2018-04-01 20:58:17,046 - game - DEBUG - Skel: calling mode 'PuppetMode  pri=42' event handler for event 'evt_ball_starting'
+2018-04-01 20:58:17,046 - game - DEBUG - Skel: calling mode 'RScoopMode  pri=30' event handler for event 'evt_ball_starting'
+2018-04-01 20:58:17,046 - game - DEBUG - Skel: calling mode 'LaughingManMode  pri=29' event handler for event 'evt_ball_starting'
+2018-04-01 20:58:17,046 - game - DEBUG - Skel: calling mode 'SkillshotMode  pri=20' event handler for event 'evt_ball_starting'
+2018-04-01 20:58:17,051 - game - DEBUG - Skel: calling mode 'BaseGameMode  pri=5' event handler for event 'evt_ball_starting'
+2018-04-01 20:58:17,053 - game - DEBUG - Skel: completing event 'None' by calling '<bound method MyGame.actually_start_ball of <__main__.MyGame object at 0x7f0e63f2c2d0>>'
+2018-04-01 20:58:17,053 - trough - DEBUG - Feeding ball to shooter lane. [pending=1|stealth=0]
+2018-04-01 20:58:17,053 - game - INFO - Programming flipper flipperLwR
+2018-04-01 20:58:17,053 - game - INFO - Enabling WPC style flipper
+2018-04-01 20:58:17,053 - game - INFO - Programming flipper flipperLwL
+2018-04-01 20:58:17,053 - game - INFO - Enabling WPC style flipper
+2018-04-01 20:58:17,053 - game - INFO - Programming flipper flipperUpR
+2018-04-01 20:58:17,053 - game - INFO - Enabling WPC style flipper
+2018-04-01 20:58:17,054 - game - DEBUG - AN Flipper enable in SkelGame.py called
+2018-04-01 20:58:17,054 - game - WARNING - No flipperEnable entry in PRCoils section of machine yaml
+2018-04-01 20:58:17,054 - ballsearch - INFO - Enabled (waiting)
+2018-04-01 20:58:17,054 - ballsearch - DEBUG - RESET via 'None'; will search in 30s.
+2018-04-01 20:58:17,054 - game - INFO - SG Event Queue -- All Clear
+2018-04-01 20:58:17,054 - game - INFO - SG Event Queue -- All Clear
+2018-04-01 20:58:17,056 - game.modes - INFO - Modes changed in last run loop cycle, now:
+2018-04-01 20:58:17,056 - game.modes - INFO -   99998  TiltMonitorMode     -            
+2018-04-01 20:58:17,056 - game.modes - INFO -   32767  SwitchMonitor       -            
+2018-04-01 20:58:17,056 - game.modes - INFO -   90     Trough              -            
+2018-04-01 20:58:17,056 - game.modes - INFO -   50     RgbShowPlayer       -            
+2018-04-01 20:58:17,056 - game.modes - INFO -   50     MultiballMode       -            
+2018-04-01 20:58:17,056 - game.modes - INFO -   44     LeftRampLoop        -            
+2018-04-01 20:58:17,056 - game.modes - INFO -   42     PuppetMode          -            
+2018-04-01 20:58:17,056 - game.modes - INFO -   30     RScoopMode          -            
+2018-04-01 20:58:17,056 - game.modes - INFO -   29     LaughingManMode     -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   20     SkillshotMode       -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   12     DMDHelper           HDTextLayer  opaque=False  enabled=True  
+2018-04-01 20:58:17,057 - game.modes - INFO -   10     SoundController     -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   8      BallSearch          -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   5      MachineMonitorMode  -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   5      BaseGameMode        -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   3      BallSave            -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   1      OSC_Mode            -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   1      BonusMode           -            
+2018-04-01 20:58:17,057 - game.modes - INFO -   0      ScoreDisplayHD      ScoreLayer   opaque=False  enabled=True  
+2018-04-01 20:58:17,084 - game - INFO - throughJam:	open  	(2)
+2018-04-01 20:58:17,096 - game - INFO - throughJam:	closed	(1)
+2018-04-01 20:58:17,097 - ballsearch - DEBUG - RESET via '<procgame.game.gameitems.Switch object at 0x7f0e63f53c90>'; will search in 30s.
+2018-04-01 20:58:17,152 - game - INFO - trough4:	closed	(1)
+2018-04-01 20:58:17,152 - ballsearch - DEBUG - RESET via '<procgame.game.gameitems.Switch object at 0x7f0e63f53ad0>'; will search in 30s.
+2018-04-01 20:58:17,179 - game - INFO - startButton:	open  	(2)
+2018-04-01 20:58:17,226 - game - INFO - trough1:	open  	(2)
+2018-04-01 20:58:17,227 - ballsearch - DEBUG - RESET via '<procgame.game.gameitems.Switch object at 0x7f0e63f53610>'; will search in 30s.
+2018-04-01 20:58:17,227 - game - INFO - trough3:	open  	(2)
+2018-04-01 20:58:17,227 - ballsearch - DEBUG - RESET via '<procgame.game.gameitems.Switch object at 0x7f0e63f535d0>'; will search in 30s.
+2018-04-01 20:58:17,233 - game - INFO - trough2:	open  	(2)
+2018-04-01 20:58:17,233 - ballsearch - DEBUG - RESET via '<procgame.game.gameitems.Switch object at 0x7f0e63f53590>'; will search in 30s.
+2018-04-01 20:58:17,304 - game - INFO - trough4:	open  	(2)
+2018-04-01 20:58:17,366 - game - INFO - trough2:	closed	(1)
+2018-04-01 20:58:17,372 - game - INFO - trough3:	closed	(1)
+2018-04-01 20:58:17,433 - game - INFO - shooter:	closed	(1)
+2018-04-01 20:58:17,433 - trough - DEBUG - Fed ball to shooter lane. [pending=0|stealth=0]
+2018-04-01 20:58:17,433 - game - DEBUG - drain logic installed to trough
+2018-04-01 20:58:17,434 - ballsearch - DEBUG - countdown STOPPED via '<procgame.game.gameitems.Switch object at 0x7f0e63f53490>'
+2018-04-01 20:58:17,875 - game - INFO - Skel: preparing to notify modes of event evt_single_ball_play.
+2018-04-01 20:58:17,875 - game - DEBUG - Skel: event 'evt_single_ball_play' queuing handler found in mode [MultiballMode  pri=50]
+2018-04-01 20:58:17,876 - game - DEBUG - Skel: calling mode 'MultiballMode  pri=50' event handler for event 'evt_single_ball_play'
+2018-04-01 20:58:17,876 - game - DEBUG - Skel: completing event 'None'.
+2018-04-01 20:58:17,876 - game - INFO - SG Event Queue -- All Clear
+2018-04-01 20:58:18,428 - game - INFO - shooter:	open  	(2)
+2018-04-01 20:58:18,429 - ballsearch - DEBUG - RESET via '<procgame.game.gameitems.Switch object at 0x7f0e63f53490>'; will search in 30s.
+2018-04-01 20:58:18,680 - game - DEBUG - ball saver enabled balls=[1], time left=[10]
+2018-04-01 20:58:19,022 - game - INFO - rampLeftHigh:	closed	(1)
+2018-04-01 20:58:19,028 - game.modes - INFO - Removed SkillshotMode  pri=20.
+2018-04-01 20:58:19,030 - game.modes - INFO - Modes changed in last run loop cycle, now:
+2018-04-01 20:58:19,030 - game.modes - INFO -   99998  TiltMonitorMode     -            
+2018-04-01 20:58:19,030 - game.modes - INFO -   32767  SwitchMonitor       -            
+2018-04-01 20:58:19,030 - game.modes - INFO -   90     Trough              -            
+2018-04-01 20:58:19,030 - game.modes - INFO -   50     RgbShowPlayer       -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   50     MultiballMode       -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   44     LeftRampLoop        -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   42     PuppetMode          -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   30     RScoopMode          -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   29     LaughingManMode     -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   12     DMDHelper           HDTextLayer  opaque=False  enabled=True  
+2018-04-01 20:58:19,031 - game.modes - INFO -   10     SoundController     -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   8      BallSearch          -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   5      MachineMonitorMode  -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   5      BaseGameMode        -            
+2018-04-01 20:58:19,031 - game.modes - INFO -   3      BallSave            -            
+2018-04-01 20:58:19,032 - game.modes - INFO -   1      OSC_Mode            -            
+2018-04-01 20:58:19,032 - game.modes - INFO -   1      BonusMode           -            
+2018-04-01 20:58:19,032 - game.modes - INFO -   0      ScoreDisplayHD      ScoreLayer   opaque=False  enabled=True  
+2018-04-01 20:58:19,062 - game - INFO - rampLeftHigh:	open  	(2)
+2018-04-01 20:58:19,062 - ballsearch - DEBUG - RESET via '<procgame.game.gameitems.Switch object at 0x7f0e63f582d0>'; will search in 30s.
+2018-04-01 20:58:19,459 - game - INFO - rampLeftLow:	closed	(1)
+2018-04-01 20:58:19,472 - game - INFO - rampLeftLow:	open  	(2)
+2018-04-01 20:58:19,472 - ballsearch - DEBUG - RESET via '<procgame.game.gameitems.Switch object at 0x7f0e63f58110>'; will search in 30s.
+2018-04-01 20:58:19,684 - ballsave - DEBUG - ball saver time left = 9
+2018-04-01 20:58:20,686 - ballsave - DEBUG - ball saver time left = 8
+2018-04-01 20:58:21,689 - ballsave - DEBUG - ball saver time left = 7
+2018-04-01 20:58:22,690 - ballsave - DEBUG - ball saver time left = 6
+2018-04-01 20:58:23,444 - game - INFO - lock3:	closed	(1)
+2018-04-01 20:58:23,445 - ballsearch - DEBUG - countdown STOPPED via '<procgame.game.gameitems.Switch object at 0x7f0e63f53d10>'
+2018-04-01 20:58:23,474 - game - INFO - lock3:	open  	(2)
+2018-04-01 20:58:23,505 - game - INFO - lock3:	closed	(1)
+2018-04-01 20:58:23,505 - ballsearch - DEBUG - countdown STOPPED via '<procgame.game.gameitems.Switch object at 0x7f0e63f53d10>'
+2018-04-01 20:58:23,520 - game - INFO - lock3:	open  	(2)
+2018-04-01 20:58:23,563 - game - INFO - lock2:	open  	(2)
+2018-04-01 20:58:23,563 - ballsearch - DEBUG - countdown STOPPED via '<procgame.game.gameitems.Switch object at 0x7f0e63f53f50>'
+2018-04-01 20:58:23,692 - ballsave - DEBUG - ball saver time left = 5
+2018-04-01 20:58:24,064 - trough - DEBUG - Feeding ball to shooter lane. [pending=1|stealth=1]
+2018-04-01 20:58:24,064 - root - INFO - ball two locked
+2018-04-01 20:58:24,094 - game - INFO - throughJam:	open  	(2)
+2018-04-01 20:58:24,112 - game - INFO - throughJam:	closed	(1)
+2018-04-01 20:58:24,112 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+2018-04-01 20:58:24,156 - game - INFO - trough4:	closed	(1)
+2018-04-01 20:58:24,156 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+2018-04-01 20:58:24,260 - game - INFO - trough3:	open  	(2)
+2018-04-01 20:58:24,260 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+2018-04-01 20:58:24,306 - game - INFO - trough2:	open  	(2)
+2018-04-01 20:58:24,306 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+2018-04-01 20:58:24,337 - game - INFO - trough4:	open  	(2)
+2018-04-01 20:58:24,352 - game - INFO - shooter:	closed	(1)
+2018-04-01 20:58:24,352 - trough - DEBUG - Fed ball to shooter lane. [pending=0|stealth=0]
+2018-04-01 20:58:24,352 - ballsearch - DEBUG - countdown STOPPED via '<procgame.game.gameitems.Switch object at 0x7f0e63f53490>'
+2018-04-01 20:58:24,428 - game - INFO - trough3:	closed	(1)
+2018-04-01 20:58:24,654 - trough - INFO - Autoplunging ball; num left to autoplunge is 0
+2018-04-01 20:58:24,688 - game - INFO - shooter:	open  	(2)
+2018-04-01 20:58:24,689 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+2018-04-01 20:58:24,693 - ballsave - DEBUG - ball saver time left = 4
+2018-04-01 20:58:24,932 - trough - INFO - Cannot feed ball as shooter lane isn't ready [pending=1 (stealth=1)] --retry in 1s
+2018-04-01 20:58:25,695 - ballsave - DEBUG - ball saver time left = 3
+2018-04-01 20:58:25,935 - trough - INFO - Cannot feed ball as shooter lane isn't ready [pending=1 (stealth=1)] --retry in 1s
+2018-04-01 20:58:26,696 - ballsave - DEBUG - ball saver time left = 2
+2018-04-01 20:58:26,940 - trough - DEBUG - Feeding ball to shooter lane. [pending=1|stealth=1]
+2018-04-01 20:58:26,941 - ballsave - DEBUG - [a ball has been saved]
+2018-04-01 20:58:26,941 - game - INFO - Skel: preparing to notify modes of event evt_ball_saved.
+2018-04-01 20:58:26,941 - game - DEBUG - Skel: event 'evt_ball_saved' queuing handler found in mode [BaseGameMode  pri=5]
+2018-04-01 20:58:26,941 - game - DEBUG - Skel: calling mode 'BaseGameMode  pri=5' event handler for event 'evt_ball_saved'
+2018-04-01 20:58:26,941 - game - INFO - BaseGameMode: BALL SAVED from Trough callback
+2018-04-01 20:58:26,948 - game - DEBUG - Skel: completing event 'None'.
+2018-04-01 20:58:26,948 - game - INFO - SG Event Queue -- All Clear
+2018-04-01 20:58:26,980 - game - INFO - throughJam:	open  	(2)
+2018-04-01 20:58:26,992 - game - INFO - throughJam:	closed	(1)
+2018-04-01 20:58:26,993 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+2018-04-01 20:58:27,044 - game - INFO - trough4:	closed	(1)
+2018-04-01 20:58:27,045 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+2018-04-01 20:58:27,252 - game - INFO - trough3:	open  	(2)
+2018-04-01 20:58:27,252 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+2018-04-01 20:58:27,322 - game - INFO - trough4:	open  	(2)
+2018-04-01 20:58:27,603 - game - INFO - shooter:	closed	(1)
+2018-04-01 20:58:27,603 - trough - DEBUG - Fed ball to shooter lane. [pending=0|stealth=0]
+2018-04-01 20:58:27,603 - ballsearch - DEBUG - countdown STOPPED via '<procgame.game.gameitems.Switch object at 0x7f0e63f53490>'
+2018-04-01 20:58:27,698 - ballsave - DEBUG - ball saver disabled - timed out
+2018-04-01 20:58:27,826 - game - INFO - Skel: preparing to notify modes of event evt_single_ball_play.
+2018-04-01 20:58:27,826 - game - DEBUG - Skel: event 'evt_single_ball_play' queuing handler found in mode [MultiballMode  pri=50]
+2018-04-01 20:58:27,826 - game - DEBUG - Skel: calling mode 'MultiballMode  pri=50' event handler for event 'evt_single_ball_play'
+2018-04-01 20:58:27,826 - game - DEBUG - Skel: completing event 'None'.
+2018-04-01 20:58:27,827 - game - INFO - SG Event Queue -- All Clear
+2018-04-01 20:58:27,906 - trough - INFO - Autoplunging ball; num left to autoplunge is 0
+2018-04-01 20:58:27,940 - game - INFO - shooter:	open  	(2)
+2018-04-01 20:58:27,940 - ballsearch - DEBUG - RESET (requested); next search is not scheduled due to current switch states.
+CTRL-C detected, quiting...
+2018-04-01 20:58:32,726 - game - INFO - Waiting for the OSC Server thread to finish
+2018-04-01 20:58:32,913 - game - INFO - OSC Server thread is done.
+2018-04-01 20:58:32,914 - game - INFO - calling cleanup
+2018-04-01 20:58:32,915 - game - INFO - 
+Total Time: 37.178 Seconds
+2018-04-01 20:58:32,915 - game - INFO - Loops: 8558
+2018-04-01 20:58:32,915 - game - INFO - Overall loop rate: 238.082Hz
+2018-04-01 20:58:32,915 - game - INFO - Frame rate: 29.851FPS
+2018-04-01 20:58:32,915 - game - INFO - DMD Updates: 1073
+2018-04-01 20:58:32,915 - game - INFO - loops between dmd updates: 7.000
+2018-04-01 20:58:32,916 - game - INFO - Waiting for the OSC Server thread to finish
+2018-04-01 20:58:32,916 - game - INFO - OSC Server thread is done.
+Exception AttributeError: "'NoneType' object has no attribute 'SDL_DestroyWindow'" in <bound method Window.__del__ of <sdl2.ext.window.Window object at 0x7f0e63f2c490>> ignored
+Exception TypeError: "'NoneType' object is not callable" in <bound method Renderer.__del__ of <sdl2.ext.sprite.Renderer object at 0x7f0e63f2ca90>> ignored
+fortytwo@GITS-Pinball:~/GITS$ 
+
