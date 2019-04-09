@@ -53,55 +53,55 @@ PRSwitches:
     slamTilt:
         number: 6
     trough1:
-        number: 32  #16
+        number: 16
         ballsearch: reset
     trough2:
-        number: 33 #17
+        number: 17
         ballsearch: reset
     trough3:
-        number: 34 #18
+        number: 18
         ballsearch: reset
     shooter:
-        number: 35 #19
+        number: 19
         ballsearch: stop, reset
     trough4:
-        number: 36 #20
+        number: 20
         type: NC
         ballsearch: reset
     throughJam:
-        number: 37 #21
+        number: 21
         type: NC
         ballsearch: reset
         tags: troughJam,tilt_visible
     trough5:
-        number: 38 #22
+        number: 22
         ballsearch: reset
     trough6:
-        number: 39 #23
+        number: 23
         ballsearch: reset
-    StandUpLeft:
-        number: 40 #24
+    StandUpL:
+        number: 24
         ballsearch: reset
-    StandUpRight:
-        number: 41 #25
+    StandUpR:
+        number: 25
         ballsearch: reset
     outlaneL:
-        number: 42 #26
+        number: 26
         ballsearch: reset
     inlaneL:
-        number: 43 #27
+        number: 27
         ballsearch: reset
     slingL:
-        number: 44 #28
+        number: 28
         ballsearch: reset
     slingR:
-        number: 45 #29
+        number: 29
         ballsearch: reset
     inlaneR:
-        number: 46 #30
+        number: 30
         ballsearch: reset
     outlaneR:
-        number: 47 #31
+        number: 31
         ballsearch: reset
     ScoopL:
         number: 72
@@ -287,5 +287,5 @@ PRLEDs:
         polarity: False
 PRLamps:
     perp1W:
-        number: L11
+        number: L12
 

@@ -56,22 +56,25 @@ class RScoopMode(procgame.game.AdvancedMode):
     def sw_thermoOC_active(self, sw):
         self.game.displayText("Thermo Optic Camouflage")
         self.game.score(500)
+        self.game.sound.play('sling')
         self.TOC_Active = True
         self.delay(delay=3, handler=self.disable_TOC)
 
     def disable_TOC(self):
         self.TOC_Active = False
 
-    def sw_StandUpL_active(self, sw):
+    def sw_StandUpLeft_active(self, sw):
         self.man_switches[0] = True
         self.game.displayText("Laughing Man Moves Left")
-        #self.game.score(100)
+        self.game.score(10)
+        self.game.sound.play('beep')
         self.checkAllSwitches()
 
-    def sw_StandUpR_active(self, sw):
+    def sw_StandUpRight_active(self, sw):
         self.man_switches[1] = True
         self.game.displayText("Laughing Man Moves Right")
-        #self.game.score(100)
+        self.game.score(10)
+        self.game.sound.play('beep')
         self.checkAllSwitches()
 
     def checkAllSwitches(self):
@@ -80,7 +83,7 @@ class RScoopMode(procgame.game.AdvancedMode):
         if(self.man_switches[0] and self.man_switches[1]): # all three are True
                 self.game.displayText("Shoot the Right Scoop!")
                 self.game.score(500)
-                self.game.sound.play('target_bank')
+                self.game.sound.play('shootjameson')
                 self.game.coils.flasherscoopR.schedule(schedule=0x80808080, cycle_seconds=0, now=True)
                 #self.game.lamps.standupMidL.disable()
                 #self.game.lamps.standupMidC.disable()
@@ -91,7 +94,7 @@ class RScoopMode(procgame.game.AdvancedMode):
                 #self.sync_lamps_to_progress()
         else:
                 self.game.score(100)
-                self.game.sound.play('target')
+                #self.game.sound.play('sling')
 
     def sw_ScoopR_active_for_500ms(self, sw):
         if(self.qualified > self.collected):
@@ -101,12 +104,15 @@ class RScoopMode(procgame.game.AdvancedMode):
             self.game.coils.flasherscoopR.disable()
             if self.TOC_Active:
                 self.game.score(3000)
+                self.game.sound.play('JamesonDeal')
                 self.TOC_Active = False
             else:
                 self.game.score(1000)
+                self.game.sound.play('Jamesonhelpyourself')
         else:
             #self.game.displayText("Jackpot grows!")
             self.game.score(100)
+            self.game.sound.play('Jamesonlittlelady')
         #self.debug()
         #self.sync_lamps_to_progress()
         self.game.coils.flasherscoopR.schedule(schedule=0xf0f0f0f0, cycle_seconds=1, now=True)

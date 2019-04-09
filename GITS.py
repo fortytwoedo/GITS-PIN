@@ -35,7 +35,7 @@ class MyGame(SkeletonGame):
 
         # THESE MUST BE DEFINED for SkeletonGame
         self.curr_file_path = curr_file_path
-        self.trough_count = 4
+        self.trough_count = 6
 
         # optional definition for 'auto-closed' switches
         #self.osc_closed_switches = ['trough2','trough3']

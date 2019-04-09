@@ -11,6 +11,15 @@ class MachineMonitorMode(procgame.game.AdvancedMode):
     def __init__(self, game):
         # Mode type is System --> Persists even if a game is not in play!
         super(MachineMonitorMode, self).__init__(game=game, priority=5, mode_type=AdvancedMode.System)
+        self.speedTimer = 200
+        self.singlecolorLED = "FF0000"
+        #LED flash scripts run with self.game.LEDs.run_script('lock1',self.lampFlashScript1) stop self.game.LEDs.stop_script('lock1')
+        self.lampFlashScript1 = []
+        self.lampFlashScript1.append({'color': '000000', 'time': self.speedTimer, 'fade': True})
+        self.lampFlashScript1.append({'color': '000000', 'time': self.speedTimer, 'fade': True})
+        self.lampFlashScript1.append({'color': self.singlecolorLED, 'time': self.speedTimer, 'fade': False})
+        self.lampFlashScript1.append({'color': '000000', 'time': self.speedTimer, 'fade': True})
+        self.lampFlashScript1.append({'color': '000000', 'time': self.speedTimer, 'fade': True})
 
     def evt_volume_down(self, vol):
         self.game.displayText("Volume Down : %d" % int(vol))        
@@ -38,11 +47,14 @@ class MachineMonitorMode(procgame.game.AdvancedMode):
         self.game.displayText('Warning!!')
 
     def evt_initial_entry(self, category):
+        self.game.sound.play('brain')
         self.game.displayText("Congrats on %s" % category, duration=2)
         return 2
 
     def evt_game_ended(self):
-        pass
+        self.game.sound.fadeout_music()
+        self.game.sound.play_music('gameovermusic',1)
+        return 5
 
     def mode_started(self):
         """
@@ -54,4 +66,6 @@ class MachineMonitorMode(procgame.game.AdvancedMode):
         self.game.coils.backboxR.enable()
         self.game.coils.backboxG.enable()
         self.game.coils.backboxB.enable()
+        #self.game.LEDs.enable("startButton", color="FF0000")
+        #self.game.LEDs.run_script('startButton',self.lampFlashScript1)
         pass

@@ -12,7 +12,7 @@ class LaughingManMode(procgame.game.AdvancedMode):
 
     """
     def __init__(self, game):
-        super(LaughingManMode, self).__init__(game=game, priority=29, mode_type=AdvancedMode.Game)
+        super(LaughingManMode, self).__init__(game=game, priority=29, mode_type=AdvancedMode.Ball)
 
         # useful to set-up a custom logger so it's easier to track debugging messages for this mode
         self.logger = logging.getLogger('LaughingMan')
@@ -31,7 +31,7 @@ class LaughingManMode(procgame.game.AdvancedMode):
 
     def sw_dropMiss_active(self, sw):
         self.game.score(10)
-        self.game.sound.play('sling')	
+        #self.game.sound.play('sling')	
 
     def sw_dropG_active(self, sw):
         self.drop_switches[0] = True
@@ -103,7 +103,7 @@ class LaughingManMode(procgame.game.AdvancedMode):
         if(self.drop_switches[0] and self.drop_switches[1] and self.drop_switches[2] and self.drop_switches[3] and self.drop_switches[4]): # all three are True
                 self.game.displayText("Shoot the Left Scoop!")
                 self.game.score(1000)
-                self.game.sound.play('target_bank')
+                self.game.sound.play('startmode')
                 #self.game.lamps.standupMidL.disable()
                 #self.game.lamps.standupMidC.disable()
                 #self.game.lamps.standupMidR.disable()
@@ -112,6 +112,8 @@ class LaughingManMode(procgame.game.AdvancedMode):
                 self.game.coils.flasherscoopL.schedule(schedule=0xA0FF0AA0, cycle_seconds=0, now=True)
                 self.game.coils.droptarget.pulse()
                 self.drop_switches = [False, False, False, False, False]
+                if (self.game.trough.num_balls() > 0):
+                    self.launchBallIntoPlay()
                 #self.sync_lamps_to_progress()
         else:
                 self.game.score(10)
@@ -121,24 +123,40 @@ class LaughingManMode(procgame.game.AdvancedMode):
 #    def debug(self):
 #        self.logger.info("qualified = %d; collected = %d" % (self.db_enabled))
 
-    def evt_ball_starting(self):
-        #self.db_enabled = False
+#    def evt_ball_starting(self):
+#        #self.db_enabled = False
+#        self.drop_switches = [False, False, False, False, False]
+#        self.qualified = self.game.getPlayerState("mode_complex_qualified")
+#        self.collected = self.game.getPlayerState("mode_complex_collected")
+#        self.game.coils.droptarget.pulse()
+#        if(self.qualified > self.collected):
+#            self.game.coils.flasherscoopL.schedule(schedule=0xA0FF0AA0, cycle_seconds=0, now=True)
+
+#    def evt_ball_ending(self, (shoot_again, last_ball)):
+#        self.game.setPlayerState("mode_complex_qualified", self.qualified)
+#        self.game.setPlayerState("mode_complex_collected", self.collected)
+#        self.game.coils.flasherscoopL.disable()
+#        self.game.modes.remove(self.game.assemble_team_mode)
+#        if not (self.game.leftramp_mode in self.game.modes):
+#            self.game.modes.add(self.game.leftramp_mode)
+#        #disable assemble team mode enable loop score mode.
+
+    def mode_started(self):
         self.drop_switches = [False, False, False, False, False]
         self.qualified = self.game.getPlayerState("mode_complex_qualified")
         self.collected = self.game.getPlayerState("mode_complex_collected")
         self.game.coils.droptarget.pulse()
         if(self.qualified > self.collected):
             self.game.coils.flasherscoopL.schedule(schedule=0xA0FF0AA0, cycle_seconds=0, now=True)
-
-    def evt_ball_ending(self, (shoot_again, last_ball)):
+    
+    def mode_stopped(self):
         self.game.setPlayerState("mode_complex_qualified", self.qualified)
         self.game.setPlayerState("mode_complex_collected", self.collected)
         self.game.coils.flasherscoopL.disable()
         self.game.modes.remove(self.game.assemble_team_mode)
         if not (self.game.leftramp_mode in self.game.modes):
             self.game.modes.add(self.game.leftramp_mode)
-        #disable assemble team mode enable loop score mode.
-
+        
     def sw_ScoopL_active_for_500ms(self, sw):
         # advertise and start random award
         #self.game.lamps.database1.disable()
@@ -149,6 +167,7 @@ class LaughingManMode(procgame.game.AdvancedMode):
             self.collected += 1
             self.game.coils.flasherscoopL.disable()
             self.db_enabled = True
+            #self.launchBallIntoPlay()
             self.game.modes.add(self.game.assemble_team_mode)
             self.game.modes.remove(self.game.leftramp_mode)
             #enable assemble team mode disable loop score mode.
@@ -165,3 +184,7 @@ class LaughingManMode(procgame.game.AdvancedMode):
         self.db_enabled = False
         self.game.coils.scoopL.pulse()
 
+    def launchBallIntoPlay(self, count=1, stealth=True):
+        #Added to fix ball save issue
+        self.game.trough.callback = None
+        self.game.trough.launch_balls(num=count,stealth=stealth,callback=None)

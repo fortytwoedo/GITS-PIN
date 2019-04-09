@@ -30,6 +30,21 @@ Animations:
   file: Puppet1-r.PNG
 - key: 'puppet2'
   file: Puppet3-r.PNG
+- key: 'MGC'
+  file: MGC.png
+- key: 'EXPO'
+  file: expologo-r.png
+- key: 'DeadFlip'
+  file: DF-LOGO-r.png
+- key: 'Skeleton'
+  file: Skeleton-r.png
+- key: 'PinballMayhem'
+  file: PM-Banner-Large.png
+- key: 'circlelock'
+  file: Futuristic_Holograph_Hologram.mp4
+  streamingMovie: True
+  repeatAnim : True
+  # holdLastFrame : True
   # everything else is used by the game code.
 Fonts:
   FontStyles:
@@ -67,22 +82,22 @@ Fonts:
   #######################
   - key: 'score_1p'
     file: 'raidercrusader.ttf'
-    size: 74
+    size: 110
   - key: 'score_activeL'
     file: 'raidercrusader.ttf'
-    size: 48
+    size: 65
   - key: 'score_activeM'
     file: 'raidercrusader.ttf'
-    size: 40
+    size: 55
   - key: 'score_activeS'
     file: 'raidercrusader.ttf'
-    size: 32
+    size: 65
   - key: 'score_inactive'
     file: 'raidercrusader.ttf'
-    size: 32
+    size: 45
   - key: 'score_sub'
     file: 'raidercrusader.ttf'
-    size: 30
+    size: 45
   ##########################
   # fonts for "settings" messages
   - key: 'settings-font'
@@ -122,8 +137,20 @@ Fonts:
 Audio:
   Music:
     - key: 'base-music-bgm'
-      file: 'SAC-Opening song.ogg'
-      volume: 0.25
+      file: '02-rise-loop.ogg'
+      volume: 0.6
+    - key: 'multiball'
+      file: 'Multiball-Med.ogg'
+      volume: 0.7
+    - key: 'gameintro'
+      file: 'R02-rise-intro.ogg'
+      volume: 0.7
+    - key: 'assembleteam'
+      file: 'Get91min15.ogg'
+      volume: 0.7
+    - key: 'gameovermusic'
+      file: 'EndCredits35.ogg'
+      volume: 0.6
     - key: 'sonic'
       file: 'mitch murder - green hill zone theme.ogg'
   Effects:
@@ -143,62 +170,191 @@ Audio:
     #   file: 'ss_miss.ogg'
     - key: 'service_save'
       file: 'accomplish_tune.wav'
+      volume: 1
     - key: 'service_previous'
       file: 'click.wav'
+      volume: 1
     - key: 'service_next'
       file: 'click.wav'
+      volume: 1
     - key: 'service_enter'
       file: 'MENU A_Select.wav'
+      volume: 1
     - key: 'service_exit'
       file: 'MENU A_Back.wav'
+      volume: 1
     - key: 'service_cancel'
       file: 'MESSAGE-B_Decline.wav'
+      volume: 1
     - key: 'sling'
       file: 'grunt-M.ogg'
+      volume: 1
+    - key: 'beep'
+      file: 'Beep.ogg'
+      volume: 1
+    - key: 'door'
+      file: 'Door.ogg'
+      volume: 1
     - key: 'target'
       file: 'MENU B_Back.wav'
+      volume: 1
     - key: 'target_bank'
       file: 'ALERT_Appear.wav'
+      volume: 1
     - key: 'drop_bank'
       file: 'gunshots-T.ogg'
+      volume: 1
     - key: 'drop_target'
       file: 'gunshot.ogg'
-    - key: 'target-2'
-      file: 'PM-2.ogg'
-    - key: 'target-5'
-      file: 'PM-5.ogg'
-    - key: 'target-0'
-      file: 'PM-0.ogg'
-    - key: 'target-1'
-      file: 'PM-1.ogg'
+      volume: 1
+    - key: 'target-C'
+      file: 'Cyborg-C.ogg'
+      volume: 5
+    - key: 'target-Y'
+      file: 'Cyborg-Y.ogg'
+      volume: 1
+    - key: 'target-B'
+      file: 'Cyborg-B.ogg'
+      volume: 1
+    - key: 'target-O'
+      file: 'Cyborg-O.ogg'
+      volume: 1
+    - key: 'target-R'
+      file: 'Cyborg-R.ogg'
+      volume: 1
+    - key: 'target-G'
+      file: 'Cyborg-G.ogg'
+      volume: 1
+    - key: 'miss'
+      file: 'Miss.ogg'
+      volume: 1
+    - key: 'orbit'
+      file: 'Orbit-Car.ogg'
+      volume: 1
+    - key: 'button'
+      file: 'Electronic-Button.ogg'
+      volume: 1
   Voice:
     - key: 'ss_successV'
       file: 'DirectHit1.ogg'
-      # volume: 0.8
+      volume: 1
     - key: 'ball_drain'
       file: 'T-knockitoff.ogg'
-      # volume: 0.8
+      volume: 1
     - key: 'ss_missV'
       file: 'YouMissed2.ogg'
-      volume: 0.8
+      volume: 1
     - key: 'a2loadout'
       file: 'A-a2loadout-com.ogg'
-      volume: 0.8
+      volume: 1
     - key: 'copythat'
       file: 'T-copythat.ogg'
-      volume: 0.8
+      volume: 1
     - key: 'mode-qualify'
       file: 'A-assemblea2loadout-comm.ogg'
-      volume: 0.8
+      volume: 1
     - key: 'modenotready'
       file: 'A-youron.ogg'
-      volume: 0.9
+      volume: 1
     - key: 'brain'
       file: 'MSeenBrain.ogg'
-      volume: 0.8
-    - key: 'puppetmaster2501'
-      file: 'PM-2501.ogg'
-      volume: 0.8
+      volume: 1
+    - key: 'cyborgbattle'
+      file: 'CyborgBattle.ogg'
+      volume: 1
     - key: 'codename2501'
       file: 'PM-codename.ogg'
-      volume: 0.8
+      volume: 1
+    - key: 'rightleftready'
+      file: 'Tachikoma Right Left Forward Ready.ogg'
+      volume: 1
+    - key: 'skillshotmade'
+      file: 'Tachikoma-whoohoo.ogg'
+      volume: 1
+    - key: 'skillshotfail'
+      file: 'Tachikoma Angry.ogg'
+      volume: 1
+    - key: 'tachleft'
+      file: 'Tachikoma-Left.ogg'
+      volume: 1
+    - key: 'tachright'
+      file: 'Tachikoma-Right.ogg'
+      volume: 1
+    - key: 'pm-complete'
+      file: 'Major-dive.ogg'
+      volume: 1
+    - key: 'major'
+      file: 'Major Name.ogg'
+      volume: 1
+    - key: 'batau'
+      file: 'Batou Name.ogg'
+      volume: 1
+    - key: 'ishkowa'
+      file: 'Ishkawa Name.ogg'
+      volume: 1
+    - key: 'borma'
+      file: 'Boma Name.ogg'
+      volume: 1
+    - key: 'saito'
+      file: 'Saito Name.ogg'
+      volume: 1
+    - key: 'togusa'
+      file: 'Togusa Name.ogg'
+      volume: 1
+    - key: 'paz'
+      file: 'M-paz.ogg'
+      volume: 1
+    - key: 'cheif'
+      file: 'A-a2loadout-com.ogg'
+      volume: 1
+    - key: 'payraise'
+      file: 'B-payraise.ogg'
+      volume: 1
+    - key: 'Tachikoma1'
+      file: 'Tachikoma1.ogg'
+      volume: 1
+    - key: 'Tachikoma2'
+      file: 'Tachikoma2.ogg'
+      volume: 1
+    - key: 'Tachikoma3'
+      file: 'Tachikoma3.ogg'
+      volume: 1
+    - key: 'shootjameson'
+      file: 'ShootJameson.ogg'
+      volume: .9
+    - key: 'Jamesonhelpyourself'
+      file: 'Jam-HelpYourself.ogg'
+      volume: 1
+    - key: 'JamesonDeal'
+      file: 'Jam-Deal.ogg'
+      volume: 1
+    - key: 'Jamesonlittlelady'
+      file: 'Jam-LittleLady.ogg'
+      volume: 1
+    - key: 'shootdiveramp'
+      file: 'ShootDiveRamp.ogg'
+      volume: .9
+    - key: 'ball_saved'
+      file: 'BallSave.ogg'
+      volume: .9
+    - key: 'letsroll'
+      file: 'T-LetsRoll.ogg'
+      volume: 1
+    - key: 'startassemble'
+      file: 'AssembleTeamStart.ogg'
+      volume: .9
+    - key: 'takeoverforyou'
+      file: 'TakeOver.ogg'
+      volume: 1
+    - key: 'combo'
+      file: 'Combo.ogg'
+      volume: 1
+    - key: 'startmode'
+      file: 'StartMode.ogg'
+      volume: .9
+    - key: 'frenzycombo'
+      file: 'RampFrenzy.ogg'
+      volume: .9
+    - key: 'frenzy'
+      file: 'Frenzy.ogg'
+      volume: .9

@@ -37,7 +37,8 @@ ScoreLayout:
             y: 1.0
         Background: 
             Animation: 
-                Name: section9_bg
+                Name: circlelock
+                #Name: section9_bg
     MultiPlayer:
         # Background: # if omitted here, Singleplayer value is used.  Set to None to disable
         #     Animation: 
@@ -57,7 +58,7 @@ ScoreLayout:
             x:  0.5
             y: 0.3
         PlayerOne:
-            font: score_sub
+            font: score_activeS
             font_style: 
                 interior_color: [134, 46, 229]
                 line_width: 1
@@ -67,7 +68,7 @@ ScoreLayout:
             x:  1
             y:  1
         PlayerTwo:
-            font: score_sub
+            font: score_activeS
             font_style: 
                 interior_color: [134, 46, 229]
                 line_width: 1
@@ -77,7 +78,7 @@ ScoreLayout:
             x:  -1
             y: 1
         PlayerThree:
-            font: score_sub
+            font: score_activeS
             font_style: 
                 interior_color: [134, 46, 229]
                 line_width: 1
@@ -87,7 +88,7 @@ ScoreLayout:
             x: 1
             y: 0.75 
         PlayerFour:
-            font: score_sub
+            font: score_activeS
             font_style: 
                 interior_color: [134, 46, 229]
                 line_width: 1

@@ -22,15 +22,14 @@ Sequence:
         # sound: sling
         duration: 1.5
     - Combo:
-        #Text:
-        #    - "Ed Owens"
-        #    - ""
-        #    - "Presents"
-        # Font: med  -- these are optional for 
-        # FontStyle: weird  -- Combo layers
         Animation: titlescreen
         # lampshow: attract_show_2
-        # sound: sling
+        duration: 2.5
+    - Combo:
+        Animation: MGC
+        duration: 2.5
+    - Combo:
+        Animation: DeadFlip
         duration: 2.5
     - text_layer: # a more powerful version of the Combo Layer for text
         x: .50   # 50% of the display width
@@ -40,6 +39,9 @@ Sequence:
         Text: "PRESS START"        
         Font: status
         duration: 1.0
+    - Combo:
+        Animation: Skeleton
+        duration: 2.5
     - HighScores:
         Font: status
         FontStyle: 
@@ -52,3 +54,6 @@ Sequence:
             - category
             - score
         duration: 3.0 # increase duration since it is now the length of all high score frames, together!
+    - Combo:
+        Animation: PinballMayhem
+        duration: 2.5

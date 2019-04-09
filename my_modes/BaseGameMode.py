@@ -32,8 +32,8 @@ class BaseGameMode(procgame.game.AdvancedMode):
         # since we might actually want to account for time spent in the trough,
         # let's reset the timer when the shooter lane goes inactive.
         self.game.sound.enable_music_ducking(True)
-        self.game.sound.fadeout_music()
-        self.game.sound.play_music('base-music-bgm',-1)
+        #self.game.sound.fadeout_music()
+        #self.game.sound.play_music('base-music-bgm',-1)
         #self.game.coils.gate.patter(5,2)
         self.game.coils.backboxR.enable()
         self.game.coils.backboxG.enable()
@@ -51,7 +51,7 @@ class BaseGameMode(procgame.game.AdvancedMode):
         """ this event is fired to notify us that a ball has been saved
         """
         self.game.log("BaseGameMode: BALL SAVED from Trough callback")
-        #self.game.sound.play('ball_saved')
+        self.game.sound.play('ball_saved')
         self.game.displayText('Ball Saved!')
         self.game.coils.flasherscoopL.pulse()
         self.game.coils.flasherscoopR.pulse()
@@ -119,6 +119,10 @@ class BaseGameMode(procgame.game.AdvancedMode):
 
         return 2
 
+        # ---------------------------------
+        # Below is just switches sounds and a base score
+        # ----------------------------------
+        
     def sw_slingL_active(self, sw):
         self.game.score(100)
         self.game.sound.play('sling')
@@ -152,3 +156,56 @@ class BaseGameMode(procgame.game.AdvancedMode):
     def sw_inlaneR_active(self, sw):
         self.game.score(10)
         self.game.sound.play('sling')
+
+    def sw_laneL_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_laneC_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_laneR_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_orbit_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('orbit')
+        
+    def sw_dropG_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_dropH_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_dropO_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_dropS_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')    
+        
+    def sw_dropT_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_dropMiss_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_lockBashL_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_lockBashR_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('sling')
+        
+    def sw_upexit_active(self, sw):
+        self.game.score(10)
+        self.game.sound.play('payraise')
+        
