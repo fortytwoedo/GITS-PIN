@@ -1,10 +1,10 @@
-Audits: {Avg Ball Time: '0:11', Avg Extra Balls: 0, Avg Game Time: '1:37', Avg Score: 8518,
-  Balls Played: 918, Games Played: 306, Games Started: 276}
+Audits: {Avg Ball Time: '0:11', Avg Extra Balls: 0, Avg Game Time: '1:36', Avg Score: 8739,
+  Balls Played: 957, Games Played: 319, Games Started: 296}
 ClassicHighScores:
 - {date: 'Fri Oct 19 22:35:51 2018', inits: DWM, score: 46730}
 - {date: 'Sat Oct 20 19:58:26 2018', inits: MAX, score: 46630}
 - {date: 'Thu Jan 31 21:34:12 2019', inits: AAA, score: 43250}
 - {date: 'Mon Feb  4 19:29:24 2019', inits: AA, score: 42250}
-- {date: 'Sat Oct 20 12:05:53 2018', inits: ZAP, score: 39710}
+- {date: 'Thu Feb 21 21:05:35 2019', inits: EDO, score: 41440}
 LoopsHighScoreData:
 - {inits: GSS, score: 5}
